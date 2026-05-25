@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "./index.css";
 
+const base = import.meta.env.BASE_URL;
 
 // ─── Shared ───────────────────────────────────────────────────────────────────
 
@@ -48,7 +49,7 @@ function Navbar() {
       <div className="max-w-screen-xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-8">
           <img
-            src="/logo.png"
+            src={`${base}logo.png`}
             alt="CareerSwift"
             className="h-9 w-auto object-contain"
           />
@@ -338,7 +339,7 @@ function MiddleColumn() {
           Why fight fair?
         </h1>
         <div className="flex justify-center">
-          <img src="/swiftbot1.png" alt="winking robot" className="w-90" />
+          <img src={`${base}swiftbot1.png`} alt="winking robot" className="w-90" />
         </div>
         <div className="flex justify-center pt-4">
           <h1
@@ -409,7 +410,7 @@ function MiddleColumn() {
 function ResumeModal() {
   return (
     <div className="overflow-hidden rounded-b-2xl h-120">
-      <img src="/resume.png" alt="Resume Builder" className="w-full h-full object-cover object-center" />
+      <img src={`${base}resume.png`} alt="Resume Builder" className="w-full h-full object-cover object-center" />
     </div>
   );
 }
@@ -417,7 +418,7 @@ function ResumeModal() {
 function CoverLetterModal() {
   return (
     <div className="overflow-hidden rounded-b-2xl h-120">
-      <img src="/cover-letter.png" alt="Cover Letter" className="w-full h-full object-cover object-center" />
+      <img src={`${base}cover-letter.png`} alt="Cover Letter" className="w-full h-full object-cover object-center" />
     </div>
   );
 }
@@ -425,7 +426,7 @@ function CoverLetterModal() {
 function LinkedInModal() {
   return (
     <div className="overflow-hidden rounded-b-2xl h-120">
-      <img src="/linkedin-score.png" alt="LinkedIn Score" className="w-full h-full object-cover object-center" />
+      <img src={`${base}linkedin-score.png`} alt="LinkedIn Score" className="w-full h-full object-cover object-center" />
     </div>
   );
 }
@@ -433,7 +434,7 @@ function LinkedInModal() {
 function InterviewModal() {
   return (
     <div className="overflow-hidden rounded-b-2xl h-120">
-      <img src="/ai-interview.png" alt="Mock Interview" className="w-full h-full object-cover object-center" />
+      <img src={`${base}ai-interview.png`} alt="Mock Interview" className="w-full h-full object-cover object-center" />
     </div>
   );
 }
@@ -441,7 +442,7 @@ function InterviewModal() {
 function TrackerModal() {
   return (
     <div className="overflow-hidden rounded-b-2xl h-120">
-      <img src="/job-tracker.png" alt="Job Tracker" className="w-full h-full object-cover object-center" />
+      <img src={`${base}job-tracker.png`} alt="Job Tracker" className="w-full h-full object-cover object-center" />
     </div>
   );
 }
@@ -607,7 +608,7 @@ function FeaturePanel({ onOpen }: { onOpen: (id: string) => void }) {
   }, []);
 
   return (
-    <aside className="w-[150px] shrink-0 h-full flex flex-col gap-10 py-2 pr-2">
+    <aside className="w-[150px] shrink-0 self-stretch flex flex-col gap-10 py-2 pr-2">
       {FEATURES.map((f, i) => {
         const lit = i === active;
         return (
@@ -732,7 +733,7 @@ function SwiftBirdAnimation() {
             swiftSpin 2.8s linear      0.5s both;
         }
       `}</style>
-      <img key={state.key} className="swift-bird" src="/swift-animated.png" alt="" />
+      <img key={state.key} className="swift-bird" src={`${base}swift-animated.png`} alt="" />
     </>
   );
 }
