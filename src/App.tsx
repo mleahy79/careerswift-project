@@ -83,7 +83,7 @@ function Navbar() {
               </div>
             )}
           </div>
-          {["Pricing", "Blog", "Contact Us"].map((l) => (
+          {["Pricing", "Blog", "For Companies", "Contact Us"].map((l) => (
             <a
               key={l}
               href="#"
