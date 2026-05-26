@@ -136,7 +136,6 @@ function Navbar() {
 
 // ─── LEFT: Social proof ───────────────────────────────────────────────────────
 
-
 function LeftColumn() {
   return (
     <div className="flex flex-col items-center justify-center gap-4 px-4 py-6 max-w-60 h-full">
@@ -158,12 +157,19 @@ function LeftColumn() {
       <div className="flex flex-col items-center gap-1">
         <div className="flex items-center gap-1">
           {Array.from({ length: 5 }).map((_, i) => (
-            <svg key={i} className="w-3.5 h-3.5 text-yellow-400 fill-current shrink-0" viewBox="0 0 20 20">
+            <svg
+              key={i}
+              className="w-3.5 h-3.5 text-yellow-400 fill-current shrink-0"
+              viewBox="0 0 20 20"
+            >
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
             </svg>
           ))}
         </div>
-        <span style={{ fontSize: "clamp(0.6rem, 0.85vw, 0.7rem)", color: C.navy }} className="opacity-50">
+        <span
+          style={{ fontSize: "clamp(0.6rem, 0.85vw, 0.7rem)", color: C.navy }}
+          className="opacity-50"
+        >
           4.9 · 2,100 reviews
         </span>
       </div>
@@ -173,7 +179,10 @@ function LeftColumn() {
           style={{ fontSize: "clamp(0.68rem, 1vw, 0.82rem)", color: C.navy }}
           className="opacity-80 leading-snug mb-3"
         >
-          "I struggle to tailor my resume for each job application. It's time-consuming and I'm never sure if I'm highlighting the right skills. With CareerSwift I found an easier way to make sure my resume fits every job I apply for."
+          "I struggle to tailor my resume for each job application. It's
+          time-consuming and I'm never sure if I'm highlighting the right
+          skills. With CareerSwift I found an easier way to make sure my resume
+          fits every job I apply for."
         </p>
         <div className="flex items-center gap-2.5">
           <div
@@ -182,7 +191,13 @@ function LeftColumn() {
           >
             MC
           </div>
-          <p style={{ fontSize: "clamp(0.65rem, 0.95vw, 0.78rem)", color: C.navy }} className="font-semibold">
+          <p
+            style={{
+              fontSize: "clamp(0.65rem, 0.95vw, 0.78rem)",
+              color: C.navy,
+            }}
+            className="font-semibold"
+          >
             Marcus Chen
           </p>
         </div>
@@ -193,7 +208,10 @@ function LeftColumn() {
           style={{ fontSize: "clamp(0.68rem, 1vw, 0.82rem)", color: C.navy }}
           className="opacity-80 leading-snug mb-3"
         >
-          "I'll be honest! It's brilliant! And I loved it. Especially the design. It's well implemented and the user experience is on the highest level. Still there are few things I haven't yet figured out, but yes, it's overall brilliant!"
+          "I'll be honest! It's brilliant! And I loved it. Especially the
+          design. It's well implemented and the user experience is on the
+          highest level. Still there are few things I haven't yet figured out,
+          but yes, it's overall brilliant!"
         </p>
         <div className="flex items-center gap-2.5">
           <div
@@ -202,7 +220,13 @@ function LeftColumn() {
           >
             KK
           </div>
-          <p style={{ fontSize: "clamp(0.65rem, 0.95vw, 0.78rem)", color: C.navy }} className="font-semibold">
+          <p
+            style={{
+              fontSize: "clamp(0.65rem, 0.95vw, 0.78rem)",
+              color: C.navy,
+            }}
+            className="font-semibold"
+          >
             Ketty Klaim
           </p>
         </div>
@@ -277,7 +301,9 @@ function ChatForm({
         </div>
       )}
       <div className="flex items-center gap-2 px-4 py-3">
-        <button className="text-gray-400 hover:text-gray-600 text-xl font-light leading-none shrink-0">+</button>
+        <button className="text-gray-400 hover:text-gray-600 text-xl font-light leading-none shrink-0">
+          +
+        </button>
         <textarea
           ref={taRef}
           autoFocus
@@ -289,7 +315,9 @@ function ChatForm({
               submit(val);
             }
           }}
-          placeholder={s.type === "text" ? s.placeholder : "or type a custom answer…"}
+          placeholder={
+            s.type === "text" ? s.placeholder : "or type a custom answer…"
+          }
           rows={1}
           className="flex-1 outline-none text-sm text-gray-700 placeholder:text-gray-400 bg-transparent resize-none overflow-hidden leading-5"
           style={{ maxHeight: "120px", overflowY: "auto" }}
@@ -299,8 +327,18 @@ function ChatForm({
           className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 hover:opacity-80 transition-opacity"
           style={{ background: C.navy }}
         >
-          <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+          <svg
+            className="w-3.5 h-3.5 text-white"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2.5}
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M5 12h14M12 5l7 7-7 7"
+            />
           </svg>
         </button>
       </div>
@@ -339,14 +377,21 @@ function MiddleColumn() {
           Why fight fair?
         </h1>
         <div className="flex justify-center">
-          <img src={`${base}swiftbot1.png`} alt="winking robot" className="w-90" />
+          <img
+            src={`${base}swiftbot1.png`}
+            alt="winking robot"
+            className="w-90"
+          />
         </div>
         <div className="flex justify-center pt-4">
           <h1
             style={{ fontSize: "clamp(2.4rem, 3.6vw, 3.3rem)", color: C.navy }}
             className="font-extrabold leading-tight"
           >
-            Follow the <span className="text-[#6a0486]">swift and <span className="land-target">land</span></span>
+            Follow the{" "}
+            <span className="text-[#6a0486]">
+              swift and <span className="land-target">land</span>
+            </span>
           </h1>
         </div>
       </div>
@@ -355,9 +400,14 @@ function MiddleColumn() {
       <div className="relative flex-1 min-h-0 overflow-hidden">
         <div
           className="absolute top-0 inset-x-0 h-16 pointer-events-none z-10"
-          style={{ background: "linear-gradient(to bottom, #f8f3e4, transparent)" }}
+          style={{
+            background: "linear-gradient(to bottom, #f8f3e4, transparent)",
+          }}
         />
-        <div ref={scrollRef} className="h-full overflow-y-auto flex flex-col justify-end gap-3 pb-4 px-1">
+        <div
+          ref={scrollRef}
+          className="h-full overflow-y-auto flex flex-col justify-end gap-3 pb-4 px-1"
+        >
           {history.map((item, i) => (
             <div key={i} className="flex flex-col gap-1">
               <div className="self-start rounded-2xl rounded-tl-sm px-3 py-2 max-w-[80%] bg-white border border-gray-100 shadow-sm">
@@ -389,7 +439,13 @@ function MiddleColumn() {
           <ChatForm key={step} step={step} onAdvance={handleAdvance} />
         ) : (
           <div className="bg-white rounded-2xl border border-[#5e9cf2] px-4 py-4 text-center w-full">
-            <p style={{ fontSize: "clamp(0.72rem, 1.05vw, 0.83rem)", color: C.navy }} className="opacity-60">
+            <p
+              style={{
+                fontSize: "clamp(0.72rem, 1.05vw, 0.83rem)",
+                color: C.navy,
+              }}
+              className="opacity-60"
+            >
               Ready to build your plan 🎯
             </p>
           </div>
@@ -410,7 +466,11 @@ function MiddleColumn() {
 function ResumeModal() {
   return (
     <div className="overflow-hidden rounded-b-2xl h-120">
-      <img src={`${base}resume.png`} alt="Resume Builder" className="w-full h-full object-cover object-center" />
+      <img
+        src={`${base}resume.png`}
+        alt="Resume Builder"
+        className="w-full h-full object-cover object-center"
+      />
     </div>
   );
 }
@@ -418,7 +478,11 @@ function ResumeModal() {
 function CoverLetterModal() {
   return (
     <div className="overflow-hidden rounded-b-2xl h-120">
-      <img src={`${base}cover-letter.png`} alt="Cover Letter" className="w-full h-full object-cover object-center" />
+      <img
+        src={`${base}cover-letter.png`}
+        alt="Cover Letter"
+        className="w-full h-full object-cover object-center"
+      />
     </div>
   );
 }
@@ -426,7 +490,11 @@ function CoverLetterModal() {
 function LinkedInModal() {
   return (
     <div className="overflow-hidden rounded-b-2xl h-120">
-      <img src={`${base}linkedin-score.png`} alt="LinkedIn Score" className="w-full h-full object-cover object-center" />
+      <img
+        src={`${base}linkedin-score.png`}
+        alt="LinkedIn Score"
+        className="w-full h-full object-cover object-center"
+      />
     </div>
   );
 }
@@ -434,7 +502,11 @@ function LinkedInModal() {
 function InterviewModal() {
   return (
     <div className="overflow-hidden rounded-b-2xl h-120">
-      <img src={`${base}ai-interview.png`} alt="Mock Interview" className="w-full h-full object-cover object-center" />
+      <img
+        src={`${base}ai-interview.png`}
+        alt="Mock Interview"
+        className="w-full h-full object-cover object-center"
+      />
     </div>
   );
 }
@@ -442,7 +514,11 @@ function InterviewModal() {
 function TrackerModal() {
   return (
     <div className="overflow-hidden rounded-b-2xl h-120">
-      <img src={`${base}job-tracker.png`} alt="Job Tracker" className="w-full h-full object-cover object-center" />
+      <img
+        src={`${base}job-tracker.png`}
+        alt="Job Tracker"
+        className="w-full h-full object-cover object-center"
+      />
     </div>
   );
 }
@@ -652,7 +728,9 @@ function FeaturePanel({ onOpen }: { onOpen: (id: string) => void }) {
 // ─── Swift bird animation ─────────────────────────────────────────────────────
 
 function SwiftBirdAnimation() {
-  const [state, setState] = useState<{ pathD: string; key: number } | null>(null);
+  const [state, setState] = useState<{ pathD: string; key: number } | null>(
+    null,
+  );
 
   useEffect(() => {
     let debounce: ReturnType<typeof setTimeout>;
@@ -662,7 +740,9 @@ function SwiftBirdAnimation() {
       const logoImg = document.querySelector(
         'nav img[alt="CareerSwift"]',
       ) as HTMLImageElement | null;
-      const landEl = document.querySelector(".land-target") as HTMLElement | null;
+      const landEl = document.querySelector(
+        ".land-target",
+      ) as HTMLElement | null;
       if (!logoImg || !landEl) return;
 
       const lr = logoImg.getBoundingClientRect();
@@ -695,10 +775,12 @@ function SwiftBirdAnimation() {
       debounce = setTimeout(calc, 200);
     };
 
-    const t = setTimeout(calc, 150);
+    const t = setTimeout(calc, 600);
+    const t2 = setTimeout(calc, 1200);
     window.addEventListener("resize", onResize);
     return () => {
       clearTimeout(t);
+      clearTimeout(t2);
       clearTimeout(debounce);
       window.removeEventListener("resize", onResize);
     };
@@ -733,7 +815,12 @@ function SwiftBirdAnimation() {
             swiftSpin 2.8s linear      0.5s both;
         }
       `}</style>
-      <img key={state.key} className="swift-bird" src={`${base}swift-animated.png`} alt="" />
+      <img
+        key={state.key}
+        className="swift-bird"
+        src={`${base}swift-animated.png`}
+        alt=""
+      />
     </>
   );
 }
