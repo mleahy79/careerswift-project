@@ -256,6 +256,12 @@ const STEPS = [
     placeholder: "e.g. New York, Remote",
     type: "text" as const,
   },
+  {
+    key: "salary",
+    question: "What's your target salary?",
+    placeholder: "e.g. $120k, Competitive, No preference",
+    type: "text" as const,  
+  },
 ];
 
 function ChatForm({
@@ -438,15 +444,15 @@ function MiddleColumn() {
         {!done ? (
           <ChatForm key={step} step={step} onAdvance={handleAdvance} />
         ) : (
-          <div className="bg-white rounded-2xl border border-[#5e9cf2] px-4 py-4 text-center w-full">
+          <div className="bg-white rounded-2xl border border-[#5e9cf2] font-extrabold px-4 py-4 text-center w-full">
             <p
               style={{
-                fontSize: "clamp(0.72rem, 1.05vw, 0.83rem)",
+                fontSize: "clamp(1.02rem, 1.37vw, 1.13rem)",
                 color: C.navy,
               }}
               className="opacity-60"
             >
-              Ready to build your plan 🎯
+              Sign up today for your customized plan!
             </p>
           </div>
         )}
